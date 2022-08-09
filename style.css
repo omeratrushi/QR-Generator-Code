@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #748ffc;
+}
+
+.wrapper {
+  height: 26rem;
+
+  max-width: 41rem;
+  background: #fff;
+  border-radius: 0.7rem;
+  padding: 2rem 2.5rem 1.5rem;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.1);
+
+  transition: all 0.2s ease;
+}
+
+.active {
+  height: 53rem;
+}
+
+header h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #222;
+}
+
+header p {
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  color: #222;
+}
+
+.wrapper .form {
+  margin: 2rem 0 2.5rem;
+}
+
+.form input {
+  width: 100%;
+  height: 6rem;
+  outline: none;
+  font-size: 1.9rem;
+  padding: 1.7rem;
+  border-radius: 5px;
+  border: 1px solid #b3b2b2;
+}
+
+.form button {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  border-radius: 5px;
+  background: #4263eb;
+  cursor: pointer;
+
+  opacity: 0.7;
+  pointer-events: none;
+}
+input:valid ~ button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.qr-img {
+  width: 45%;
+}
+
+.wrapper .qr-code {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  padding: 3.3rem 0;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
+
+.active .qr-code {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+@media (max-width: 34em) {
+  html {
+    font-size: 50%;
+  }
+}
